@@ -1,0 +1,298 @@
+# Stylish Flag
+
+**Description:** Are you a front end dev ?  
+**Website:** https://tommytheduck.github.io/stylish_flag/
+
+## Writeup:
+When I opened the provided website link, all that appeared on the page was a black background with the green text `where is the flag ;-;`. There were no obvious elements, buttons or hidden inputs on the screen, so I decided to inspect the structure of the site itself. Since the challenge domain used GitHub Pages (`tommytheduck.github.io`), I realized that the website was likely hosted directly from a public GitHub repository belonging to the same user. I navigated to `https://github.com/tommytheduck`, and there I found a repository named `stylish_flag`, which clearly matched the challenge title.  
+Inside the repository, two files were present: `index.html` and `csss.css`. The HTML file contained a simple structure: a `<h1>` tag displaying the text seen on the page and a `<div>` element with the class `flag`, which was marked as hidden. Here’s what the HTML looked like:
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Flag</title>
+  <link rel="stylesheet" href="csss.css">
+</head>
+
+<body>
+  <h1>where is the flag ;-;</h1>
+  <br>
+  <div hidden class="flag"></div>
+</body>
+
+</html>
+```
+The hidden `<div class="flag">` immediately caught my attention, as it suggested that the flag might be concealed using CSS styling. I opened the linked stylesheet `csss.css` and the contents confirmed this suspicion. The file began with some basic styling for centering and coloring the page elements, but what stood out was a long `.flag` class containing hundreds of `box-shadow` entries. These shadows defined multiple `x, y` pixel coordinates with a consistent color `#0f0`, each representing a small green dot. The key part looked like this:
+```css
+.flag {
+        width: 8px;
+        height: 8px;
+        background: #0f0;
+        transform: rotate(180deg);
+        opacity: 0.05;
+        box-shadow:
+            264px 0px #0f0,
+            1200px 0px #0f0,
+            0px 8px #0f0,
+            32px 8px #0f0,
+            88px 8px #0f0,
+            96px 8px #0f0,
+            160px 8px #0f0,
+            168px 8px #0f0,
+            176px 8px #0f0,
+            184px 8px #0f0,
+            192px 8px #0f0,
+            256px 8px #0f0,
+            320px 8px #0f0,
+            344px 8px #0f0,
+            408px 8px #0f0,
+            416px 8px #0f0,
+            480px 8px #0f0,
+            488px 8px #0f0,
+            496px 8px #0f0,
+            560px 8px #0f0,
+            568px 8px #0f0,
+            576px 8px #0f0,
+            640px 8px #0f0,
+            648px 8px #0f0,
+            656px 8px #0f0,
+            712px 8px #0f0,
+            720px 8px #0f0,
+            736px 8px #0f0,
+            744px 8px #0f0,
+            792px 8px #0f0,
+            800px 8px #0f0,
+            808px 8px #0f0,
+            816px 8px #0f0,
+            824px 8px #0f0,
+            960px 8px #0f0,
+            968px 8px #0f0,
+            976px 8px #0f0,
+            1040px 8px #0f0,
+            1048px 8px #0f0,
+            1056px 8px #0f0,
+            1112px 8px #0f0,
+            1120px 8px #0f0,
+            1128px 8px #0f0,
+            1136px 8px #0f0,
+            1200px 8px #0f0,
+            1208px 8px #0f0,
+            0px 16px #0f0,
+            8px 16px #0f0,
+            24px 16px #0f0,
+            32px 16px #0f0,
+            80px 16px #0f0,
+            88px 16px #0f0,
+            96px 16px #0f0,
+            104px 16px #0f0,
+            168px 16px #0f0,
+            176px 16px #0f0,
+            248px 16px #0f0,
+            256px 16px #0f0,
+            320px 16px #0f0,
+            344px 16px #0f0,
+            400px 16px #0f0,
+            408px 16px #0f0,
+            416px 16px #0f0,
+            480px 16px #0f0,
+            504px 16px #0f0,
+            576px 16px #0f0,
+            584px 16px #0f0,
+            640px 16px #0f0,
+            656px 16px #0f0,
+            664px 16px #0f0,
+            712px 16px #0f0,
+            720px 16px #0f0,
+            736px 16px #0f0,
+            744px 16px #0f0,
+            808px 16px #0f0,
+            952px 16px #0f0,
+            960px 16px #0f0,
+            1032px 16px #0f0,
+            1040px 16px #0f0,
+            1112px 16px #0f0,
+            1200px 16px #0f0,
+            1208px 16px #0f0,
+            0px 24px #0f0,
+            8px 24px #0f0,
+            24px 24px #0f0,
+            32px 24px #0f0,
+            96px 24px #0f0,
+            104px 24px #0f0,
+            168px 24px #0f0,
+            176px 24px #0f0,
+            248px 24px #0f0,
+            256px 24px #0f0,
+            320px 24px #0f0,
+            328px 24px #0f0,
+            336px 24px #0f0,
+            344px 24px #0f0,
+            408px 24px #0f0,
+            416px 24px #0f0,
+            480px 24px #0f0,
+            504px 24px #0f0,
+            576px 24px #0f0,
+            632px 24px #0f0,
+            640px 24px #0f0,
+            656px 24px #0f0,
+            664px 24px #0f0,
+            712px 24px #0f0,
+            720px 24px #0f0,
+            736px 24px #0f0,
+            744px 24px #0f0,
+            808px 24px #0f0,
+            952px 24px #0f0,
+            1032px 24px #0f0,
+            1040px 24px #0f0,
+            1112px 24px #0f0,
+            1120px 24px #0f0,
+            1200px 24px #0f0,
+            1208px 24px #0f0,
+            8px 32px #0f0,
+            24px 32px #0f0,
+            96px 32px #0f0,
+            104px 32px #0f0,
+            168px 32px #0f0,
+            176px 32px #0f0,
+            240px 32px #0f0,
+            248px 32px #0f0,
+            320px 32px #0f0,
+            328px 32px #0f0,
+            336px 32px #0f0,
+            344px 32px #0f0,
+            408px 32px #0f0,
+            416px 32px #0f0,
+            480px 32px #0f0,
+            504px 32px #0f0,
+            568px 32px #0f0,
+            576px 32px #0f0,
+            584px 32px #0f0,
+            632px 32px #0f0,
+            640px 32px #0f0,
+            648px 32px #0f0,
+            664px 32px #0f0,
+            712px 32px #0f0,
+            720px 32px #0f0,
+            736px 32px #0f0,
+            744px 32px #0f0,
+            808px 32px #0f0,
+            952px 32px #0f0,
+            1048px 32px #0f0,
+            1056px 32px #0f0,
+            1120px 32px #0f0,
+            1128px 32px #0f0,
+            1136px 32px #0f0,
+            1208px 32px #0f0,
+            1216px 32px #0f0,
+            8px 40px #0f0,
+            16px 40px #0f0,
+            24px 40px #0f0,
+            96px 40px #0f0,
+            104px 40px #0f0,
+            168px 40px #0f0,
+            176px 40px #0f0,
+            248px 40px #0f0,
+            256px 40px #0f0,
+            320px 40px #0f0,
+            344px 40px #0f0,
+            408px 40px #0f0,
+            416px 40px #0f0,
+            480px 40px #0f0,
+            504px 40px #0f0,
+            576px 40px #0f0,
+            584px 40px #0f0,
+            640px 40px #0f0,
+            664px 40px #0f0,
+            712px 40px #0f0,
+            720px 40px #0f0,
+            736px 40px #0f0,
+            744px 40px #0f0,
+            808px 40px #0f0,
+            952px 40px #0f0,
+            960px 40px #0f0,
+            1056px 40px #0f0,
+            1064px 40px #0f0,
+            1136px 40px #0f0,
+            1200px 40px #0f0,
+            1208px 40px #0f0,
+            8px 48px #0f0,
+            16px 48px #0f0,
+            24px 48px #0f0,
+            88px 48px #0f0,
+            96px 48px #0f0,
+            104px 48px #0f0,
+            112px 48px #0f0,
+            168px 48px #0f0,
+            176px 48px #0f0,
+            248px 48px #0f0,
+            256px 48px #0f0,
+            320px 48px #0f0,
+            344px 48px #0f0,
+            400px 48px #0f0,
+            408px 48px #0f0,
+            416px 48px #0f0,
+            424px 48px #0f0,
+            480px 48px #0f0,
+            488px 48px #0f0,
+            496px 48px #0f0,
+            560px 48px #0f0,
+            568px 48px #0f0,
+            576px 48px #0f0,
+            640px 48px #0f0,
+            648px 48px #0f0,
+            656px 48px #0f0,
+            664px 48px #0f0,
+            720px 48px #0f0,
+            728px 48px #0f0,
+            736px 48px #0f0,
+            808px 48px #0f0,
+            960px 48px #0f0,
+            968px 48px #0f0,
+            976px 48px #0f0,
+            1032px 48px #0f0,
+            1040px 48px #0f0,
+            1048px 48px #0f0,
+            1056px 48px #0f0,
+            1112px 48px #0f0,
+            1120px 48px #0f0,
+            1128px 48px #0f0,
+            1136px 48px #0f0,
+            1200px 48px #0f0,
+            1208px 48px #0f0,
+            248px 56px #0f0,
+            256px 56px #0f0,
+            1200px 56px #0f0,
+            1208px 56px #0f0,
+            256px 64px #0f0,
+            264px 64px #0f0,
+            872px 64px #0f0,
+            880px 64px #0f0,
+            888px 64px #0f0,
+            896px 64px #0f0,
+            904px 64px #0f0,
+            1192px 64px #0f0,
+            1200px 64px #0f0;
+    }
+```
+This pattern made it clear that the flag was being drawn as pixel art using CSS box-shadows, but the element was hidden and nearly invisible due to the very low opacity and the 180-degree rotation. To visualize it, I opened the browser’s Developer Tools (Inspect Element) on the challenge page, located the hidden `<div class="flag">`, and decided to modify its CSS dynamically through the console.  
+In the browser console, I used the following JavaScript snippet to unhide and restyle the flag element so it would appear clearly:
+```javascript
+const f = document.querySelector('.flag');
+if (f) {
+  f.hidden = false;
+  f.style.opacity = '1';
+  f.style.transform = 'rotate(0deg)';
+  f.style.background = '#0f0';
+  f.style.width = '1px';
+  f.style.height = '1px';
+  f.style.scale = '0.1';
+}
+```
+Running this revealed a set of bright green pixels forming text across the screen. Initially, only the first few characters were visible (`v1t`), but after reducing the pixel size and applying a scale of `0.1`, I could finally see the entire text clearly. The complete flag appeared in glowing green letters drawn purely through CSS.
+
+## Flag:
+```text
+v1t{h1d30ut_css}
+```
