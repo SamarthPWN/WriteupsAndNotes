@@ -1,8 +1,12 @@
+# Cryptonite Senior Taskphase 2
+- [Cryptography](https://github.com/SamarthPWN/WriteupsAndNotes/blob/main/CryptoniteSTP2/Cryptography.md)
+- [Web Exploitation](https://github.com/SamarthPWN/WriteupsAndNotes/blob/main/CryptoniteSTP2/Web_Exploitation.md)
+
 # V1t CTF 2025
 **Date:** 31 October, 13:00 UTC — 02 November, 13:00 UTC  
 **Format:** Jeopardy  
 **Location:** Online  
-**Weight:** 21.76  
+**Weight:** 22.05  
 **CTFtime:** [V1t CTF 2025](https://ctftime.org/event/2920)
 
 ### Crypto
