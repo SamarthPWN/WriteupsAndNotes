@@ -66,7 +66,7 @@ def extract_checks(decoded):
     return checks
 
 def reconstruct_flag(checks):
-    flag = list("v1t{???????}")  # total length 11
+    flag = list("v1t{???????}")  
     key = compute_key_from_prefix(ord('v'))
     for idx, val in checks:
         flag[idx + 3] = chr(val ^ key)
