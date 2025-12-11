@@ -1,7 +1,7 @@
 # Forensics
 
 **Description:** Gotham’s underbelly trembles as whispers spread—The Riddler’s back, leaving cryptic puzzles across the city’s darkest corners. Every clue is a trap, every answer another step into madness. Think you can outsmart him? Step into Gotham’s shadows and prove it. Let the Batman's Hustle get its recognition!  
-**File:** [gotham.raw](./gotham.raw)
+**File:** [gotham.raw](https://drive.google.com/file/d/1fwqdgpXkEnZ2xgujGaRufmPht5H_3xrT/view)
 
 ## Writeup:
 When I first saw that the challenge file was a `RAW` memory dump, I started by searching online about how forensics CTFs typically deal with such dumps and landed on `MemLabs`, which serves as a solid beginner friendly foundation for memory forensics. That led me straight to the `Volatility` framework, which is essentially the go-to tool for analysing Windows memory images. While `Volatility 3` exists, its plugin set still lacks many of the useful modules required for CTF style investigations so I chose `Volatility 2` for this challenge. I began by running `imageinfo` to detect the most appropriate profile for the dump:
