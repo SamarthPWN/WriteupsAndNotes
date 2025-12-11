@@ -1,5 +1,6 @@
 # Cryptonite Senior Taskphase 2
 - [Cryptography](https://github.com/SamarthPWN/WriteupsAndNotes/blob/main/CryptoniteSTP2/Cryptography.md)
+- [Forensics](https://github.com/SamarthPWN/WriteupsAndNotes/blob/main/CryptoniteSTP2/Forensics.md)
 - [Web Exploitation](https://github.com/SamarthPWN/WriteupsAndNotes/blob/main/CryptoniteSTP2/Web_Exploitation.md)
 
 # V1t CTF 2025
