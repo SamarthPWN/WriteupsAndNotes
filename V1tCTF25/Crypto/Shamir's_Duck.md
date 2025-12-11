@@ -93,7 +93,7 @@ Dung-afe15ff509b15eb48b0e9d72fc2285094f6233ec98914312
 Steve-cb1a439f208aa76e89236cb496abaf20723191c188e23f54
 """.strip().splitlines()
 
-P = 2**521 - 1  # large prime field
+P = 2**521 - 1  
 shares = []
 for i, line in enumerate(shares_raw, start=1):
     name, hexs = line.split("-", 1)
